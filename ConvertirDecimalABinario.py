@@ -1,15 +1,13 @@
-def ConvertirDecimalABinario():
-
-   print('Hola este es un programa desarrollado en python')
-   CD = int(input('Dame el número decimal que deseas convertir a binario'))
-   B = ' '
-   while (CD > 0) : 
-   Operacion = str (CD % 2)
-   B = Operacion + B
-   CD = CD //2
-   print(str(B))
-
-   if __name__ == "__main__":
-   
-   ConvertirDecimalABinario
-   
+#Ejercicio en practica de clase tomado de parzibyte.me
+def numero_decimal(decimal):
+   if decimal <=0:
+      return "0"
+   bin = ""
+   while decimal > 0:
+      restante = int(decimal %2)
+      decimal = int(decimal /2)
+      bin = str(restante) + bin
+   return bin
+decimal = int(input("Dame un numero: "))
+bin = numero_decimal(decimal)
+print(f"El numero {decimal} es {bin} en binario")
